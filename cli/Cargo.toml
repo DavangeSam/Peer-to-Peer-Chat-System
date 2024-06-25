@@ -1,0 +1,22 @@
+[package]
+name = "bing2bing"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+tokio = { version = "1", features = ["full", "tracing"] }
+tracing = "0.1.37"
+tracing-log = { version = "0.2", features = ["log-tracer"] }
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+chrono = {version = "0.4", features = ["serde"] }
+crossterm = {version = "0.27" }
+clap = {version = "4.2", features = ["derive", "env", "unicode", "wrap_help"]}
+unicode-width = "0.1"
+log = "0.4"
+bing2bing-core = { path = "../core" }
+dotenvy = "0.15.7"
+ratatui = "0.26.2"
+tui-logger = "0.11.1"
